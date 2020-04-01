@@ -1,0 +1,12 @@
+1. É feito a classe de Cliente, pois a partir dela iremos criar a classe da Conta.
+
+2. É feito a classe Conta, que recebe como parâmetro construtor o a classe Cliente.
+    2.1 Dentro do metódo construtor, é gerado um número de conta a partir de uma função que retornar um número aleatório.
+    2.2 É definido, também dentro do metódo construtor, o saldo que se equivale inicialmente a 0.
+
+3. Dentro da interface, criamos o Caixa Eletrônico que recebe uma instância da classe Conta no método construtor.
+    3.1 Recebido no método construtor a classe Conta, podemos assim acessar seus respectivos atributos.
+        3.1.1 Criamos assim, um sistema de menu onde o usuário escolhe qual função deseja executar:
+              (Sacar, Depositar, Consultar Saldo).
+
+4. Dentro da main, criamos um sistema onde o usuário poderá repetir quantas vezes quiser as ações no caixa eletrônico.
