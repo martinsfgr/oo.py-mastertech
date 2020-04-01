@@ -1,0 +1,42 @@
+1. Crio duas tuplas, uma contendo todos os naipes do jogo, a segunda, contendo os ranks das cartas.
+
+2. Crio a classe da Carta, onde seus parâmetros do método construtor são:
+   Naipe, Rank e Valor.
+
+    2.1 Crio a classe do Baralho, onde seu único atributo é uma lista de cartas vazia,
+        em que as cartas do baralho são adicionadas através de um for através dos naipes, 
+        e para cada naipe, é feito um for nos ranks, para que, em seguida, as cartas instanciadas
+        a partir da classe Carta sejam adicionadas a lista de cartas.  
+
+    2.2 A classe Baralho possui os seguintes métodos:
+        - adicionar_carta
+            (que adiciona a combinação de carta em uma lista);
+        - remover_carta
+            (que remove alguma carta do monte do baralho);
+        - sortear_carta
+            (que sorteia as cartas para para o funcionamento, 
+            que ativa a função remover_carta, para que ela não se duplique durante o jogo);
+
+3. Crio a classe do Jogo21, onde seus únicos atributos do método construtor é a instanciação do Baralho, e a
+   definição da pontuação inicial, correspondente a 0.
+
+   3.1 O Jogo21 possui os seguintes métodos:
+       - executar_primeira_rodada
+            (onde as duas primeiras cartas iniciais são geradas, me retornando a 
+            pontuação correspondente das duas cartas);
+       - executar_jogada
+            (onde o jogador tem a possibilidade de gerar mais uma carta);
+       - apurar_pontos
+            (onde a função retorna True se a pontuação for maior ou igual a 21)
+
+4. Dentro da classe Interface, determino que seu atributo é a classe Jogo21, onde podemos acessar seus métodos.
+    4.1 Dentro do método construtor da classe Interface onde é executado a primeira rodada do jogo.
+    4.1.1 Os métodos da classe Interface são:
+        - jogar_rodada
+            (executado apenas no while, do arquivo main, caso o método continuar_jogo retorne True,
+            ou seja, apenas quando o jogador decidir continuar jogando até que atinja ou ultrapasse
+            a pontuação máxima);
+        - continuar_jogo
+            (é o método que retorna False ou True, determinando o continuação ou o término do jogo,
+            sendo que, caso o método apurar_pontos, da classe Jogo21, retorne True, a função encerrar_jogo
+            é ativada e a função continuar_jogo passa a ser false, parando assim a execução do jogo).
